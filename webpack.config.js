@@ -10,5 +10,16 @@ module.exports={
 },
 devServer: {
     contentBase: './dist'
+},
+module: {
+
+    rules: [
+        {test: '/\.(.js|.jsx)$/',
+        exclude: /node_module/,
+        use:['babel-loader']}
+    ]
+},
+resolve:{
+    extensions:['js','jsx']
 }
 }
